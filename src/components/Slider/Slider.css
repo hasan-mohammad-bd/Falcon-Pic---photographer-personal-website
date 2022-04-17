@@ -1,4 +1,40 @@
-.img-slider-holder{
-    height: 600px;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;900&display=swap');
+
+.heading {
+    font-family: 'Inter', sans-serif;
+    font-weight: 900;
+    font-size: 4rem;
+}
+
+.cover1{
+    height: 90vh;
+    background-size: cover;
+    background-position: center;
     background-image: url(../../img/cover-img/cover-1.jpg);
+}
+.cover2{
+    height: 90vh;
+    background-size: cover;
+    background-position: center;
+    background-image: url(../../img/cover-img/cover-2.jpg);
+}
+.cover3{
+    height: 90vh;
+    background-size: cover;
+    background-position: center;
+    background-image: url(../../img/cover-img/cover-3.jpg);
+}
+
+.btn1 {
+    margin-top: 10px;
+    padding: 10px 20px;
+    border: 3px solid orange;
+    background-color: transparent;
+    color: white;
+    transition: all 0.2s ease-in;
+}
+
+.btn1:hover {
+ background-color: orange;
+ color: black;
 }
