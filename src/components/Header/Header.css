@@ -44,6 +44,9 @@ nav a:hover{
 .active-link::after:hover{
     background-color: white;
 }
-    
+
+.container-2 {
+    background-color: black;
+}
 
 

@@ -9,18 +9,21 @@
 .cover1{
     height: 90vh;
     background-size: cover;
+    background-attachment:fixed;
     background-position: center;
     background-image: url(../../img/cover-img/cover-1.jpg);
 }
 .cover2{
     height: 90vh;
     background-size: cover;
+    background-attachment: fixed;
     background-position: center;
     background-image: url(../../img/cover-img/cover-2.jpg);
 }
 .cover3{
     height: 90vh;
     background-size: cover;
+    background-attachment: fixed;
     background-position: center;
     background-image: url(../../img/cover-img/cover-3.jpg);
 }
@@ -28,7 +31,7 @@
 .btn1 {
     margin-top: 10px;
     padding: 10px 20px;
-    border: 3px solid orange;
+    border: 2px solid #c48f56;
     background-color: transparent;
     color: white;
     transition: all 0.2s ease-in;
@@ -36,5 +39,6 @@
 
 .btn1:hover {
  background-color: orange;
+ border: 2px solid orange;
  color: black;
 }

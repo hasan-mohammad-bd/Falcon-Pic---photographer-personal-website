@@ -6,7 +6,8 @@ import { FiShoppingCart } from "@react-icons/all-files/fi/FiShoppingCart";
 
 const Header = () => {
     return (
-        <div className='d-flex justify-content-between container align-items-center py-3'>
+        <div className="container-2 sticky-top">
+                    <div className='d-flex justify-content-between container align-items-center py-3'>
             <div className="img-holder">
                 <img className='w-100' src={img} alt="" />
             </div>
@@ -18,6 +19,7 @@ const Header = () => {
                 <NavLink to="/checkout"><FiShoppingCart></FiShoppingCart></NavLink>
 
             </nav>
+        </div>
         </div>
     );
 };
