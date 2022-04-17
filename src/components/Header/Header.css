@@ -1,0 +1,49 @@
+.img-holder {
+    width: 200px;
+
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    margin-left: 25px;
+    transition: color 0.3s ease-in;
+    padding: 0 10px;
+    z-index: 4;
+
+}
+
+nav a:hover{
+    z-index: 4;
+    color: #ffb657;
+}
+
+.active-link{
+    position: relative;
+    color: #ffffff;
+    z-index: 4;
+
+
+
+}
+
+.active-link::after{
+    /* box-shadow: inset 0 -9px 0 0; */
+    content : "";
+    position : absolute;
+    width : 100%;
+    height : 10px;
+    background-color: #fcaf5ec7;
+    bottom: 0; 
+    left: 0;
+    z-index: -1;
+
+}
+
+.active-link::after:hover{
+    background-color: white;
+}
+    
+
+

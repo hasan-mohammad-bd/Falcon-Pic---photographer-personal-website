@@ -7,13 +7,14 @@ import Checkout from './components/Checkout/Checkout';
 import Signup from './components/Signup/Signup';
 import About from './components/About/About';
 import PageNotFound from './components/PageNotFound/PageNotFound';
+import Header from './components/Header/Header';
 
 function App() {
   return (
     <div className="App">
+      <Header></Header>
       <Routes>
         <Route path="/" element={<Home></Home>}></Route>
-        <Route path="/home" element={<Home></Home>}></Route>
         <Route path="*" element={<PageNotFound></PageNotFound>}></Route>
         <Route path="/checkout" element={<Checkout></Checkout>}></Route>
         <Route path="/login" element={<Login></Login>}></Route>
