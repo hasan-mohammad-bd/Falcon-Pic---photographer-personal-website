@@ -1,0 +1,15 @@
+.footer{
+    margin-top: 100px;
+    background-color: #131313;
+}
+
+hr {
+    width: 30px;
+    background-color:#c48f56;
+}
+
+.social a {
+    display: block;
+    color: white;
+    text-decoration: none;
+}

@@ -5,7 +5,7 @@ import { BsArrowRight } from "@react-icons/all-files/bs/BsArrowRight";
 const AboutPhoto = () => {
   return (
     <div className="container container1">
-      <div className="d-flex">
+      <div className="d-flex flex-column flex-lg-row">
         <div className="img-holder-about"></div>
         <div className="text d-flex justify-content-center align-items-center">
           <div>
