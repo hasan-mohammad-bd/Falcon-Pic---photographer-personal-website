@@ -4,8 +4,12 @@ import "./Header.css";
 import img from "../../img/logo (5).png";
 import { FiShoppingCart } from "@react-icons/all-files/fi/FiShoppingCart";
 import { Nav, Navbar, NavDropdown } from "react-bootstrap";
+import { useAuthState } from "react-firebase-hooks/auth";
+import auth from "../../firebase.init";
+import { signOut } from "firebase/auth";
 
 const Header = () => {
+  const [user, loading, error] = useAuthState(auth);
   return (
     <div className="container-2 sticky-top">
       <div className="d-flex flex-column flex-md-row justify-content-between container align-items-center py-3">
@@ -33,12 +37,15 @@ const Header = () => {
           >
             Blogs
           </NavLink>
-          <NavLink
-            className={({ isActive }) => (isActive ? "active-link" : "link")}
-            to="/login"
-          >
-            Login
-          </NavLink>
+            {
+              user?  <button onClick={()=>signOut(auth)} className="signUp" href="">Sign Out</button> :           
+              <NavLink
+              className={({ isActive }) => (isActive ? "active-link" : "link")}
+              to="/login"
+            >
+              Login
+            </NavLink>
+            }
           <NavLink to="/checkout">
             <FiShoppingCart></FiShoppingCart>
           </NavLink>

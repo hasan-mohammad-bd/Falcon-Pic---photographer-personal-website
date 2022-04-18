@@ -47,8 +47,27 @@ nav a:hover{
 
 .container-2 {
     background-color: black;
+    margin: 0;
 }
 
+
+.btn2 {
+    padding: 0;
+}
+
+.signUp{
+    border: 2px solid #c48f56;
+    padding: 5px;
+    margin-left: 10px;
+    background-color: transparent;
+    color: white;
+}
+
+.signUp:hover {
+    background-color: #c48f56;
+    color: white;
+    
+}
 
 
 

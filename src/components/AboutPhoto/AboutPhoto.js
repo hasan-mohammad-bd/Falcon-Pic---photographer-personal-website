@@ -13,7 +13,7 @@ const AboutPhoto = () => {
               <span className="heading">Why me ?</span>
             </h1>
             <p>
-              I am professional photographer based in <span>NewYork</span> have
+              Hi! I am Hasan, a professional photographer based in <span>NewYork</span> have
               7 years of experience in different photography filed. I worked
               with lots of big company including Target , Walmart, GAP, Tesla,
               Nike. with my professional knowledge I can work very effectively

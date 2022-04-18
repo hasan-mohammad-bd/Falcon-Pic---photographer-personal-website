@@ -1,0 +1,10 @@
+.img-holder-login{
+    background-image: url(../../img/login-cover.jpg);
+    width: 100%;
+    background-position: center;
+}
+
+.pointer{
+    cursor: pointer;
+}
+
