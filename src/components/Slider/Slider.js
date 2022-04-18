@@ -11,14 +11,14 @@ const Slider = () => {
     return (
 <Carousel activeIndex={index} onSelect={handleSelect}>
       <Carousel.Item>
-        <div class="cover1"></div>
+        <div className="cover1"></div>
         <Carousel.Caption className='meddle'>
           <h1 className='text-center heading'>Meet with your professional photographer </h1>
           <button className='btn1'>Book Now</button>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
-      <div class="cover2"></div>
+      <div className="cover2"></div>
 
       <Carousel.Caption className='meddle'>
           <h1 className='text-center heading'>Seven years of fashion photography experience</h1>
@@ -26,7 +26,7 @@ const Slider = () => {
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
-      <div class="cover3"></div>
+      <div className="cover3"></div>
 
       <Carousel.Caption className='meddle'>
           <h1 className='text-center heading'>Using most latest camera technology and gears</h1>

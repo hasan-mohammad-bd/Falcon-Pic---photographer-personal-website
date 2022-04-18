@@ -22,7 +22,7 @@ const Signup = () => {
   const passwordRef = useRef("");
   const nameRef = useRef("");
   let errorElement;
-  console.log(errorElement);
+
   const [createUserWithEmailAndPassword, user, loading, error] =
     useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
   const [signInWithGoogle, user1, loading1, error1] = useSignInWithGoogle(auth);
@@ -31,7 +31,7 @@ const Signup = () => {
  }
 
   if (user || user1) {
-    console.log(user);
+
     navigate("/");
   }
 
@@ -48,7 +48,7 @@ const Signup = () => {
     const name = nameRef.current.value;
     const email = emailRef.current.value;
     const password = passwordRef.current.value;
-    console.log(email, password);
+
 
     await createUserWithEmailAndPassword(email, password);
     await updateProfile({ displayName: name });
@@ -56,7 +56,6 @@ const Signup = () => {
 
   const setPassword = async () => {
     const email = emailRef.current.value;
-    console.log(email);
     await sendPasswordResetEmail(email, sending);
     if (email) {
       toast("mail has been sent !");

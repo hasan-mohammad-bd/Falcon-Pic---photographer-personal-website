@@ -18,7 +18,7 @@ const Login = () => {
     const emailRef = useRef("");
     const passwordRef = useRef("");
     let errorElement;
-    console.log(errorElement);
+
     const [
       signInWithEmailAndPassword,
       user,
@@ -51,7 +51,7 @@ const Login = () => {
       event.preventDefault();
       const email = event.target.email.value;
       const password = event.target.password.value;
-      console.log(email, password);
+
 
       await   signInWithEmailAndPassword(email, password)
       
@@ -59,7 +59,6 @@ const Login = () => {
 
   const setPassword = async ()  => {
     const email = emailRef.current.value;
-    console.log(email);
       await sendPasswordResetEmail(email, sending);
       if(email){
         toast("mail has been sent !");
