@@ -8,6 +8,7 @@ import Signup from './components/Signup/Signup';
 import About from './components/About/About';
 import PageNotFound from './components/PageNotFound/PageNotFound';
 import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer';
 
 function App() {
   return (
@@ -21,6 +22,8 @@ function App() {
         <Route path="/about" element={<About></About>}></Route>
         <Route path="/signup" element={<Signup></Signup>}></Route>
       </Routes>
+      <Footer></Footer>
+      
     </div>
   );
 }
