@@ -12,6 +12,7 @@ import auth from "../../firebase.init";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { FaGoogle } from "@react-icons/all-files/fa/FaGoogle";
+import Loading from "../Loading/Loading";
 
 const Signup = () => {
   const navigate = useNavigate();
@@ -25,6 +26,9 @@ const Signup = () => {
   const [createUserWithEmailAndPassword, user, loading, error] =
     useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
   const [signInWithGoogle, user1, loading1, error1] = useSignInWithGoogle(auth);
+  if(loading || loading1){
+    <Loading></Loading>
+ }
 
   if (user || user1) {
     console.log(user);
@@ -67,7 +71,6 @@ const Signup = () => {
           <div className="w-75">
             <form onSubmit={handleSignUp}>
               <input
-                ref={nameRef}
                 className="d-block w-75 mx-auto p-2 mb-3"
                 type="text"
                 name="name"

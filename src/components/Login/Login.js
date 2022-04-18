@@ -6,6 +6,7 @@ import auth from "../../firebase.init";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { FaGoogle } from "@react-icons/all-files/fa/FaGoogle";
+import Loading from "../Loading/Loading";
 
 
 
@@ -26,6 +27,10 @@ const Login = () => {
     ] = useSignInWithEmailAndPassword(auth);
     const [signInWithGoogle, user1, loading1, error1] = useSignInWithGoogle(auth);
     let from = location?.state?.from?.pathname || "/";
+
+    if(loading || loading1){
+       <Loading></Loading>
+    }
 
     if(user || user1){
       navigate(from, {replace: true})

@@ -1,0 +1,16 @@
+.photo-container{
+    background-image: url(../../img/checkout.jpg);
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 160vh;
+}
+
+.checkout-form {
+    padding: 3px;
+    border: 2px solid #c48f56;
+}
+
+.selected {
+    outline-style: none;
+}
