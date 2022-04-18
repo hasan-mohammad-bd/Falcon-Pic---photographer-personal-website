@@ -13,3 +13,7 @@ hr {
     color: white;
     text-decoration: none;
 }
+
+.social a:hover{
+    color: #c48f56;
+}
