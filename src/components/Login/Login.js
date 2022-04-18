@@ -1,5 +1,5 @@
 import React, { useRef, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import "./Login.css";
 import { useSendPasswordResetEmail, useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import auth from "../../firebase.init";
@@ -13,6 +13,7 @@ import { FaGoogle } from "@react-icons/all-files/fa/FaGoogle";
 const Login = () => {
     const navigate = useNavigate()
     const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
+    const location = useLocation()
     const emailRef = useRef("");
     const passwordRef = useRef("");
     let errorElement;
@@ -24,10 +25,14 @@ const Login = () => {
       error,
     ] = useSignInWithEmailAndPassword(auth);
     const [signInWithGoogle, user1, loading1, error1] = useSignInWithGoogle(auth);
+    let from = location?.state?.from?.pathname || "/";
 
     if(user || user1){
-      navigate("/")
-    }
+      navigate(from, {replace: true})
+  }
+
+
+
 
 
       if (error || error1) {

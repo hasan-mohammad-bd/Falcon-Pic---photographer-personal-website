@@ -1,0 +1,7 @@
+.img-holder-about-me{
+    background-image: url(../../img/hasan.jpg);
+    background-position: center;
+    background-size: cover; 
+    width: 100%;
+    height: 90vh;
+}

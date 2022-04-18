@@ -106,6 +106,7 @@ const Signup = () => {
                 Send Email
               </span>
             </p>
+            <p className="w-75 mx-auto">Have an account? <span className=" pointer" onClick={()=>navigate("/login")}>Please Login</span></p>
             <ToastContainer />
             <button
               onClick={() => signInWithGoogle()}

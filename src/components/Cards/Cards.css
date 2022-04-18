@@ -6,9 +6,9 @@
 }
 
 .description{
-    display: none;
     margin: 10px 25px;
-    transition: display 0.4s ease-in;
+    transition: color 0.5s ease-in;
+    color: transparent;
 
 }
 
@@ -22,7 +22,7 @@
 }
 
 .service:hover .description{
-    display: block;
+    color: white;
 
 }
 
