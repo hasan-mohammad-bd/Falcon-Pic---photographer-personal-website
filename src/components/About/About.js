@@ -14,7 +14,7 @@ const About = () => {
               </h1>
               <h2>Hasan Mohammad</h2>
               <p>
-                I am working day and night to be full stock web developer. It's sometime very hard to focus but I am fully determined to achieve my dream. At the same time, growing my learning habit which is very important for a developer. 
+                I am working day and night to be full stack web developer. It's sometime very hard to focus but I am fully determined to achieve my dream. At the same time, growing my learning habit which is very important for a developer. 
               </p>
             </div>
           </div>

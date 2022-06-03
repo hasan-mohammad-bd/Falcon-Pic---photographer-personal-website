@@ -46,7 +46,7 @@ const Checkout = () => {
       </div>
       <div className="w-75">
         <Elements stripe={stripePromise}>
-          <CheckoutForm service={service} />
+          <CheckoutForm service={service}></CheckoutForm>
         </Elements>
       </div>
     </div>

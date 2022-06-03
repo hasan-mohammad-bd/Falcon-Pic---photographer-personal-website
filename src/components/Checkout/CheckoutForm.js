@@ -13,25 +13,29 @@ const CheckoutForm = ({ service }) => {
     const [transactionId, setTransactionId] = useState('');
     const [clientSecret, setClientSecret] = useState('');
 
-    const {img, name, price:totalPrice, _id} = service;
-
+    const {img, name, price, _id} = service;
+    console.log(price);
+    
 
     useEffect(() => {
-        fetch('http://localhost:5000/create-payment-intent', {
-            method: 'POST',
-            headers: {
-                'content-type': 'application/json',
-            },
-            body: JSON.stringify({ totalPrice })
-        })
-            .then(res => res.json())
-            .then(data => {
-                if (data?.clientSecret) {
-                    setClientSecret(data.clientSecret);
-                }
-            });
+        if(price){
+            fetch('http://localhost:5000/create-payment-intent', {
+                method: 'POST',
+                headers: {
+                    'content-type': 'application/json',
+                    'authorization': `Bearer ${localStorage.getItem('accessToken')}`
+                },
+                body: JSON.stringify({ price })
+            })
+                .then(res => res.json())
+                .then(data => {
+                    if (data?.clientSecret) {
+                        setClientSecret(data.clientSecret);
+                    }
+                });
+        }
 
-    }, [totalPrice]) 
+    }, [price]) 
 
     const handleSubmit = async (event) => {
         event.preventDefault();
@@ -82,7 +86,7 @@ const CheckoutForm = ({ service }) => {
                 order: _id,
                 transactionId: paymentIntent.id
             }
-            fetch(`http://localhost:5000/payment`, {
+            fetch('http://localhost:5000/payment', {
                 method: 'POST',
                 headers: {
                     'content-type': 'application/json',
