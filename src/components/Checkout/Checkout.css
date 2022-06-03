@@ -15,6 +15,10 @@
     outline-style: none;
 }
 
-.the-card-img{
-    border-radius: 50%;
+
+
+.payment-card{
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 20px;
 }

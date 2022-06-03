@@ -7,6 +7,7 @@ import auth from "../../firebase.init";
 import { Elements } from "@stripe/react-stripe-js";
 import { loadStripe } from "@stripe/stripe-js";
 import CheckoutForm from "./CheckoutForm";
+import './Checkout.css'
 
 const stripePromise = loadStripe(
   "pk_test_51L0km2DvpcSfFbldZpHNo418SREG3o5oy78wO7zoMHeX1eRDylYWETYGUtNm5XT3MYj7IpDyWpOK2d8IsTvrGuL300xWizEDN8"
@@ -26,9 +27,10 @@ const Checkout = () => {
   const { img, name, price } = service;
   const { displayName, email } = user;
   return (
-    <div className="">
-      <div className="container text-black">
-        <Card className="w-25">
+    <div className="container">
+      <div className="d-flex justify-content-center align-items-center">
+      <div className="text-black">
+        <Card className="w-50">
           <div className="">
             <Card.Img className="the-card-img w-full" variant="top" src={img} />
           </div>
@@ -44,10 +46,11 @@ const Checkout = () => {
           </Card.Body>
         </Card>
       </div>
-      <div className="w-75">
+      <div className="w-75 wounded payment-card">
         <Elements stripe={stripePromise}>
           <CheckoutForm service={service}></CheckoutForm>
         </Elements>
+      </div>
       </div>
     </div>
   );
