@@ -1,99 +1,41 @@
-import React from "react";
-import "./Checkout.css";
+import React, { useEffect, useState } from "react";
+import { Card } from "react-bootstrap";
+import { useAuthState } from "react-firebase-hooks/auth";
+
+import { useParams } from "react-router-dom";
+import auth from "../../firebase.init";
+
 const Checkout = () => {
+  const { id } = useParams();
+  const [user, loading, error] = useAuthState(auth);
+  const [service, setService] = useState({});
+  useEffect(() => {
+    fetch(`http://localhost:5000/service/${id}`)
+      .then((res) => res.json())
+      .then((data) => setService(data));
+  }, [id]);
+  console.log(service);
+
+  const {img, name, price} = service;
+  const {displayName, email} = user;
   return (
-    <div className="container d-flex flex-column flex-lg-row">
-      <div className="photo-container"></div>
-      <div className="checkout-form w-100">
-        <form className="p-3 " action="">
-          <div className="dropdown d-block w-75 mx-auto p-2 mb-3">
-            <label className=" mx-auto p-2 mb-3" for="Package">
-              Choose my package:
-            </label>
-            <select
-              id="Package"
-              className="w-50 mx-auto p-2 mb-3 selected"
-              name="Package"
-            >
-              <option value="volvo">Fashion Shotting</option>
-              <option value="saab">Interior Shotting</option>
-              <option value="fiat" selected>
-                Product Shotting
-              </option>
-            </select>
+    <div>
+      <div className="container text-black">
+        <Card className="w-25">
+          <div className="">
+          <Card.Img className="the-card-img w-full" variant="top" src={img} />
           </div>
-          <h3 className="text-center">Your Details</h3>
-          <input
-            className="d-block w-75 mx-auto p-2 mb-3"
-            type="text"
-            name="name"
-            id="name"
-            placeholder="Name"
-            required
-          />
-          <input
-            className="d-block w-75 mx-auto p-2 mb-3"
-            type="text"
-            name="address"
-            id="address"
-            placeholder="Address"
-            required
-          />
-          <input
-            className="d-block w-75 mx-auto p-2 mb-3"
-            type="email"
-            name="email"
-            id="email"
-            placeholder="Email"
-            required
-          />
-          <h3 className="text-center">Payment</h3>
-          <input
-            className="d-block w-75 mx-auto p-2 mb-3"
-            type="text"
-            name="name"
-            id="name"
-            placeholder="Name On Card"
-            required
-          />
-          <input
-            className="d-block w-75 mx-auto p-2 mb-3"
-            type="text"
-            name="name"
-            id="name"
-            placeholder="Card Number"
-            required
-          />
-          <input
-            className="d-block w-75 mx-auto p-2 mb-3"
-            type="text"
-            name="name"
-            id="name"
-            placeholder="Exp Months"
-            required
-          />
-          <input
-            className="d-block w-75 mx-auto p-2 mb-3"
-            type="text"
-            name="name"
-            id="name"
-            placeholder="CVV"
-            required
-          />
-          <input
-            className="d-block w-75 mx-auto p-2 mb-3"
-            type="text"
-            name="name"
-            id="name"
-            placeholder="Exp Year"
-            required
-          />
-          <input
-            className="btn1 d-block w-75 mx-auto"
-            type="submit"
-            value="Check Out"
-          />
-        </form>
+          <Card.Body>
+            <Card.Text>
+              <p>Dear {displayName}, Please pay for your selected package <span className="text-success">{name}</span>.</p>
+              Your Package price is <span className="text-success fw-bold">${price}</span>
+            </Card.Text>
+          </Card.Body>
+
+        </Card>
+      </div>
+      <div>
+        
       </div>
     </div>
   );

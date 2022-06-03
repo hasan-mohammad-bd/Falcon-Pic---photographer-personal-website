@@ -9,8 +9,6 @@ import { FaGoogle } from "@react-icons/all-files/fa/FaGoogle";
 import Loading from "../Loading/Loading";
 
 
-
-
 const Login = () => {
     const navigate = useNavigate()
     const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
@@ -103,7 +101,7 @@ const Login = () => {
             <p className="w-75 mx-auto">Forgot password? <span onClick={setPassword} className=" pointer">Send Email</span></p>
             <ToastContainer/>
             <p className="w-75 mx-auto">New Here? <span className=" pointer" onClick={()=>navigate("/signup")}>Please Register</span></p>
-            <button onClick={()=>signInWithGoogle()} className="w-75 mx-auto btn1 d-block"><span className="me-2"><FaGoogle></FaGoogle></span> Google Login</button>
+            <button onClick={()=>signInWithGoogle()} className="w-75 mx-auto btn1 d-block"><span className="me-2"><FaGoogle className="mr-2"></FaGoogle></span> Google Login</button>
             
           </div>
         </div>

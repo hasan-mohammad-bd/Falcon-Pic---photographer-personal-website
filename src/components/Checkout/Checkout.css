@@ -14,3 +14,7 @@
 .selected {
     outline-style: none;
 }
+
+.the-card-img{
+    border-radius: 50%;
+}

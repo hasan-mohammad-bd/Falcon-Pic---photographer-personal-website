@@ -12,7 +12,7 @@ const Cards = () => {
             <div className="line"></div>
             <h5 className="py-2">$ 3000</h5>
             <h3 className="py-2">FASHION SHOOTING</h3>
-            <button onClick={()=>navigate("/checkout")} className="btn1">BOOK NOW</button>
+            <button onClick={()=>navigate("/checkout/6299dfdea53fad61af6cb13c")} className="btn1">BOOK NOW</button>
             <p className="description">I am working with fashion photography for so long. Have vast experience. you can choose this package if you need any fashion related photography</p>
 
         </div>
