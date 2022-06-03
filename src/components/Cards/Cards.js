@@ -20,7 +20,7 @@ const Cards = () => {
             <div className="line"></div>
             <h5 className="py-2">$ 5000</h5>
             <h3 className="py-2">INTERIOR SHOOTING</h3>
-            <button onClick={()=>navigate("/checkout")} className="btn1">BOOK NOW</button>
+            <button onClick={()=>navigate("/checkout/6299dfdea53fad61af6cb13d")} className="btn1">BOOK NOW</button>
             <p className="description">My interior photography have long reputation since I started working in this field. the package could be your best choice </p>
 
         </div>
@@ -28,7 +28,7 @@ const Cards = () => {
             <div className="line"></div>
             <h5 className="py-2">$ 2000</h5>
             <h3 className="py-2">PRODUCT SHOOTING</h3>
-            <button onClick={()=>navigate("/checkout")} className="btn1">BOOK NOW</button>
+            <button onClick={()=>navigate("/checkout/6299dfdea53fad61af6cb13e")} className="btn1">BOOK NOW</button>
             <p className="description">I am offering very affordable rate of product photography where I cam offering almost photos with $2000. I think I would be best deal for you</p>
 
         </div>

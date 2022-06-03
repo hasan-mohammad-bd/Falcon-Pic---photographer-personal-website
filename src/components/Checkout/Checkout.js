@@ -28,9 +28,9 @@ const Checkout = () => {
   const { displayName, email } = user;
   return (
     <div className="container">
-      <div className="d-flex justify-content-center align-items-center">
+      <div className="d-lg-flex justify-content-center align-items-center">
       <div className="text-black">
-        <Card className="w-50">
+        <Card className="w-50 mb-5 ">
           <div className="">
             <Card.Img className="the-card-img w-full" variant="top" src={img} />
           </div>
