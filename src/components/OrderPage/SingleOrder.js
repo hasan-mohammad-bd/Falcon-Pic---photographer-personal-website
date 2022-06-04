@@ -8,7 +8,7 @@ const SingleOrder = ({order, index}) => {
         <td>{index + 1}</td>
         <td>{email}</td>
         <td>{serviceName}</td>
-        <td>{servicePrice}</td>
+        <td>${servicePrice}</td>
         <td>{transactionId}</td>
 
       </tr>
