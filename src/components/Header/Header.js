@@ -46,7 +46,7 @@ const Header = () => {
               Login
             </NavLink>
             }
-          <NavLink to="/checkout">
+          <NavLink to="/order">
             <FiShoppingCart></FiShoppingCart>
           </NavLink>
         </nav>

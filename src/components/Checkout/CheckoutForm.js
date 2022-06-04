@@ -66,10 +66,8 @@ const CheckoutForm = ({ service }) => {
                     card: card,
                     billing_details: {
                         name: user.displayName,
-                        email: user.email,
-                        serviceName:name,
-                        servicePrice: price,
-                        serviceId: _id,
+                        email: user.email
+
                         
                     },
                 },
@@ -88,7 +86,11 @@ const CheckoutForm = ({ service }) => {
             //store payment on database
             const payment = {
                 order: _id,
-                transactionId: paymentIntent.id
+                transactionId: paymentIntent.id,
+                serviceName:name,
+                servicePrice: price,
+                serviceId: _id,
+                email: user.email
             }
             fetch('http://localhost:5000/payment', {
                 method: 'POST',
