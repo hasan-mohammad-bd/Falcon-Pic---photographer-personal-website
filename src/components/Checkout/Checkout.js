@@ -8,12 +8,14 @@ import { Elements } from "@stripe/react-stripe-js";
 import { loadStripe } from "@stripe/stripe-js";
 import CheckoutForm from "./CheckoutForm";
 import './Checkout.css'
+import { useForm } from 'react-hook-form';
 
 const stripePromise = loadStripe(
   "pk_test_51L0km2DvpcSfFbldZpHNo418SREG3o5oy78wO7zoMHeX1eRDylYWETYGUtNm5XT3MYj7IpDyWpOK2d8IsTvrGuL300xWizEDN8"
 );
 
 const Checkout = () => {
+  const { register, handleSubmit, watch, formState: { errors } } = useForm();
   const { id } = useParams();
   const [user, loading, error] = useAuthState(auth);
   const [service, setService] = useState({});
@@ -47,6 +49,19 @@ const Checkout = () => {
         </Card>
       </div>
       <div className="w-75 wounded payment-card">
+        <div>
+        <input
+              className="input w-full max-w-xs input-bordered mb-2 input-success"
+              type="text"
+              placeholder="Your Name"
+              {...register("name", { required: true })}
+            />
+            {errors.productName?.type === "required" && (
+              <span className="text-red-400 mb-3">
+                "Name is required"
+              </span>
+            )}
+        </div>
         <Elements stripe={stripePromise}>
           <CheckoutForm service={service}></CheckoutForm>
         </Elements>

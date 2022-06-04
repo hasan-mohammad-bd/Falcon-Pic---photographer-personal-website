@@ -66,7 +66,11 @@ const CheckoutForm = ({ service }) => {
                     card: card,
                     billing_details: {
                         name: user.displayName,
-                        email: user.email
+                        email: user.email,
+                        serviceName:name,
+                        servicePrice: price,
+                        serviceId: _id,
+                        
                     },
                 },
             },
