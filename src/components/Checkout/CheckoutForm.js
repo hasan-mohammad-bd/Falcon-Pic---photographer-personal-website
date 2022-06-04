@@ -19,7 +19,7 @@ const CheckoutForm = ({ service }) => {
 
     useEffect(() => {
         if(price){
-            fetch('http://localhost:5000/create-payment-intent', {
+            fetch('https://protected-hamlet-95889.herokuapp.com/create-payment-intent', {
                 method: 'POST',
                 headers: {
                     'content-type': 'application/json',
@@ -92,7 +92,7 @@ const CheckoutForm = ({ service }) => {
                 serviceId: _id,
                 email: user.email
             }
-            fetch('http://localhost:5000/payment', {
+            fetch('https://protected-hamlet-95889.herokuapp.com/payment', {
                 method: 'POST',
                 headers: {
                     'content-type': 'application/json',

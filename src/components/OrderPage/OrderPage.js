@@ -9,7 +9,7 @@ const OrderPage = () => {
   const [orders, setOrders] = useState([]);
   console.log(orders);
   useEffect(() => {
-    fetch(`http://localhost:5000/payment/${user.email}`)
+    fetch(`https://protected-hamlet-95889.herokuapp.com/payment/${user.email}`)
       .then((res) => res.json())
       .then((data) => setOrders(data));
   }, []);
