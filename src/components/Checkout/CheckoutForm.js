@@ -19,7 +19,7 @@ const CheckoutForm = ({ service }) => {
 
     useEffect(() => {
         if(price){
-            fetch('https://protected-hamlet-95889.herokuapp.com/create-payment-intent', {
+            fetch('https://photography-web-app-server-side-production.up.railway.app/create-payment-intent', {
                 method: 'POST',
                 headers: {
                     'content-type': 'application/json',
@@ -92,7 +92,7 @@ const CheckoutForm = ({ service }) => {
                 serviceId: _id,
                 email: user.email
             }
-            fetch('https://protected-hamlet-95889.herokuapp.com/payment', {
+            fetch('https://photography-web-app-server-side-production.up.railway.app/payment', {
                 method: 'POST',
                 headers: {
                     'content-type': 'application/json',

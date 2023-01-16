@@ -20,7 +20,7 @@ const Checkout = () => {
   const [user, loading, error] = useAuthState(auth);
   const [service, setService] = useState({});
   useEffect(() => {
-    fetch(`https://protected-hamlet-95889.herokuapp.com/service/${id}`)
+    fetch(`https://photography-web-app-server-side-production.up.railway.app/service/${id}`)
       .then((res) => res.json())
       .then((data) => setService(data));
   }, [id]);
