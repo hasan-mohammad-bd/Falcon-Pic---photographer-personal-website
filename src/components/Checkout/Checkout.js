@@ -20,7 +20,7 @@ const Checkout = () => {
   const [user, loading, error] = useAuthState(auth);
   const [service, setService] = useState({});
   useEffect(() => {
-    fetch(`https://photography-web-app-server-side-production.up.railway.app/service/${id}`)
+    fetch(`https://photography-q03e.onrender.com/service/${id}`)
       .then((res) => res.json())
       .then((data) => setService(data));
   }, [id]);

@@ -19,7 +19,7 @@ const CheckoutForm = ({ service }) => {
 
     useEffect(() => {
         if(price){
-            fetch('https://photography-web-app-server-side-production.up.railway.app/create-payment-intent', {
+            fetch('https://photography-q03e.onrender.com/create-payment-intent', {
                 method: 'POST',
                 headers: {
                     'content-type': 'application/json',
@@ -92,7 +92,7 @@ const CheckoutForm = ({ service }) => {
                 serviceId: _id,
                 email: user.email
             }
-            fetch('https://photography-web-app-server-side-production.up.railway.app/payment', {
+            fetch('https://photography-q03e.onrender.com/payment', {
                 method: 'POST',
                 headers: {
                     'content-type': 'application/json',
